@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz Matematika Permutasi</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="mb-4">Quiz Matematika Permutasi</h1>
+    <div id="quiz-container">
+      <!-- Bagian Soal -->
+      <div id="question-section">
+        <p id="question-text" class="font-weight-bold"></p>
+        <div id="choices"></div>
+      </div>
+      
+      <!-- Pembahasan dan Alert -->
+      <div id="alert-section" class="mt-3"></div>
+      <div id="explanation" class="mt-3"></div>
+      
+      <!-- Tombol Soal Selanjutnya -->
+      <button id="next-btn" class="btn btn-primary mt-3 hidden">Soal Selanjutnya</button>
+      
+      <!-- Penghitung Soal dan Nilai -->
+      <div id="score" class="mt-4">
+        <p>Soal: <span id="current-question"></span>/<span id="total-questions"></span></p>
+        <p>Benar: <span id="correct-count">0</span> | Salah: <span id="incorrect-count">0</span></p>
+      </div>
+    </div>
+    
+    <!-- Tampilan akhir Quiz -->
+    <div id="result-container" class="hidden text-center">
+      <h2>Quiz Selesai!</h2>
+      <p>Total Soal: <span id="final-total"></span></p>
+      <p>Benar: <span id="final-correct"></span></p>
+      <p>Salah: <span id="final-incorrect"></span></p>
+      <button id="restart-btn" class="btn btn-success mt-3">Ulang Quiz</button>
+    </div>
+  </div>
+  
+  <!-- Script JavaScript -->
+  <script>
+    // Data pertanyaan quiz dengan 10 soal
+    const quizQuestions = [
+      {
+        question: "Berapa banyak susunan berbeda dari 5 buku?",
+        choices: ["60", "120", "24", "720"],
+        correctAnswer: 1,
+        explanation: "Karena semua buku berbeda, jumlah susunan adalah 5! = 120."
+      },
+      {
+        question: "Dari 7 siswa, berapa cara memilih dan mengurutkan 3 siswa sebagai ketua, wakil, dan sekretaris?",
+        choices: ["210", "35", "42", "105"],
+        correctAnswer: 0,
+        explanation: "Permutasi parsial: 7P3 = 7! / (7-3)! = 210."
+      },
+      {
+        question: "Susunan huruf pada kata 'BANANA' dihitung dengan rumus permutasi dengan pengulangan. Berapakah jumlah susunan yang berbeda?",
+        choices: ["30", "60", "120", "720"],
+        correctAnswer: 1,
+        explanation: "Frekuensi huruf: A = 3, N = 2, B = 1, sehingga 6!/(3!*2!*1!) = 60."
+      },
+      {
+        question: "Berapa banyak susunan dari 4 angka yang berbeda?",
+        choices: ["24", "12", "16", "20"],
+        correctAnswer: 0,
+        explanation: "Dengan 4 angka berbeda, susunan adalah 4! = 24."
+      },
+      {
+        question: "Dari 8 orang, berapa cara memilih dan mengurutkan 4 orang sebagai ketua, wakil, sekretaris, dan bendahara?",
+        choices: ["1680", "840", "336", "5040"],
+        correctAnswer: 0,
+        explanation: "Permutasi parsial: 8P4 = 8! / (8-4)! = 1680."
+      },
+      {
+        question: "Berapa banyak susunan berbeda untuk 3 huruf yang dipilih dari huruf A, B, C, D tanpa pengulangan?",
+        choices: ["12", "18", "24", "36"],
+        correctAnswer: 2,
+        explanation: "4P3 = 4! / (4-3)! = 24."
+      },
+      {
+        question: "Berapa banyak susunan dari 6 siswa yang duduk melingkar?",
+        choices: ["120", "720", "360", "240"],
+        correctAnswer: 0,
+        explanation: "Untuk susunan melingkar, gunakan (n-1)!, jadi (6-1)! = 5! = 120."
+      },
+      {
+        question: "Terdapat 10 buku, berapa cara menyusun 3 buku yang dipilih secara berurutan?",
+        choices: ["720", "840", "900", "600"],
+        correctAnswer: 0,
+        explanation: "10P3 = 10! / 7! = 10 x 9 x 8 = 720."
+      },
+      {
+        question: "Jika terdapat 7 angka berbeda, berapa banyak susunan tanpa pengulangan?",
+        choices: ["5040", "2520", "720", "840"],
+        correctAnswer: 0,
+        explanation: "Karena semua angka berbeda, susunan adalah 7! = 5040."
+      },
+      {
+        question: "Susunan huruf kata 'STATISTIK' dihitung dengan rumus permutasi dengan pengulangan. Berapakah jumlah susunan yang berbeda?",
+        choices: ["15120", "30240", "60480", "7560"],
+        correctAnswer: 0,
+        explanation: "Jumlah huruf = 9, dengan frekuensi: S=2, T=3, I=2, A=1, K=1, sehingga susunan = 9!/(2!*3!*2!*1!*1!) = 15120."
+      }
+    ];
+    
+    let currentQuestionIndex = 0;
+    let correctCount = 0;
+    let incorrectCount = 0;
+    
+    // Element DOM
+    const questionTextEl = document.getElementById("question-text");
+    const choicesEl = document.getElementById("choices");
+    const alertSectionEl = document.getElementById("alert-section");
+    const explanationEl = document.getElementById("explanation");
+    const nextBtn = document.getElementById("next-btn");
+    const currentQuestionEl = document.getElementById("current-question");
+    const totalQuestionsEl = document.getElementById("total-questions");
+    const correctCountEl = document.getElementById("correct-count");
+    const incorrectCountEl = document.getElementById("incorrect-count");
+    
+    const quizContainer = document.getElementById("quiz-container");
+    const resultContainer = document.getElementById("result-container");
+    const finalTotalEl = document.getElementById("final-total");
+    const finalCorrectEl = document.getElementById("final-correct");
+    const finalIncorrectEl = document.getElementById("final-incorrect");
+    const restartBtn = document.getElementById("restart-btn");
+    
+    // Fungsi untuk memuat soal
+    function loadQuestion() {
+      // Bersihkan konten sebelumnya
+      alertSectionEl.innerHTML = "";
+      explanationEl.innerHTML = "";
+      choicesEl.innerHTML = "";
+      nextBtn.classList.add("hidden");
+      
+      // Perbarui penghitung soal
+      currentQuestionEl.innerText = currentQuestionIndex + 1;
+      totalQuestionsEl.innerText = quizQuestions.length;
+      
+      // Tampilkan teks soal
+      const currentQuestion = quizQuestions[currentQuestionIndex];
+      questionTextEl.innerText = currentQuestion.question;
+      
+      // Buat pilihan jawaban sebagai radio button
+      currentQuestion.choices.forEach((choice, index) => {
+        const div = document.createElement("div");
+        div.classList.add("form-check");
+        
+        const input = document.createElement("input");
+        input.classList.add("form-check-input");
+        input.type = "radio";
+        input.name = "choice";
+        input.id = "choice" + index;
+        input.value = index;
+        
+        const label = document.createElement("label");
+        label.classList.add("form-check-label");
+        label.setAttribute("for", "choice" + index);
+        label.innerText = choice;
+        
+        div.appendChild(input);
+        div.appendChild(label);
+        choicesEl.appendChild(div);
+        
+        // Event listener ketika jawaban dipilih
+        input.addEventListener("change", handleAnswerSelection);
+      });
+    }
+    
+    // Fungsi penanganan saat jawaban dipilih
+    function handleAnswerSelection(event) {
+      // Nonaktifkan pilihan lainnya
+      const radios = document.getElementsByName("choice");
+      radios.forEach(radio => radio.disabled = true);
+      
+      const selectedAnswer = parseInt(event.target.value);
+      const currentQuestion = quizQuestions[currentQuestionIndex];
+      
+      // Tampilkan pembahasan
+      explanationEl.innerHTML = "<strong>Pembahasan:</strong> " + currentQuestion.explanation;
+      
+      // Periksa jawaban yang dipilih
+      if(selectedAnswer === currentQuestion.correctAnswer){
+        correctCount++;
+        alertSectionEl.innerHTML = '<div class="alert alert-success" role="alert">Jawaban Anda benar!</div>';
+      } else {
+        incorrectCount++;
+        alertSectionEl.innerHTML = '<div class="alert alert-danger" role="alert">Jawaban Anda salah!</div>';
+      }
+      
+      // Perbarui skor
+      correctCountEl.innerText = correctCount;
+      incorrectCountEl.innerText = incorrectCount;
+      
+      // Tampilkan tombol "Soal Selanjutnya"
+      nextBtn.classList.remove("hidden");
+    }
+    
+    // Event listener untuk tombol soal selanjutnya
+    nextBtn.addEventListener("click", function() {
+      currentQuestionIndex++;
+      if(currentQuestionIndex < quizQuestions.length){
+        loadQuestion();
+      } else {
+        // Tampilkan hasil akhir
+        quizContainer.classList.add("hidden");
+        finalTotalEl.innerText = quizQuestions.length;
+        finalCorrectEl.innerText = correctCount;
+        finalIncorrectEl.innerText = incorrectCount;
+        resultContainer.classList.remove("hidden");
+      }
+    });
+    
+    // Event listener untuk tombol ulang quiz
+    restartBtn.addEventListener("click", function() {
+      // Reset semua variabel dan tampilan
+      currentQuestionIndex = 0;
+      correctCount = 0;
+      incorrectCount = 0;
+      correctCountEl.innerText = correctCount;
+      incorrectCountEl.innerText = incorrectCount;
+      quizContainer.classList.remove("hidden");
+      resultContainer.classList.add("hidden");
+      loadQuestion();
+    });
+    
+    // Inisialisasi quiz
+    loadQuestion();
+  </script>
+  
+  <!-- Bootstrap JS dan dependensinya -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

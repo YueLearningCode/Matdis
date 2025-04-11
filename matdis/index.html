@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style/style.css">
+        <title>Matdis</title>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous">
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body style="background: #4ea2dc;">
+      
+      <!-- Preload -->
+      <div id="preloader">
+        <div class="animated-seven">7</div>
+      </div>
+
+      <script>
+        window.addEventListener("load", function () {
+          const preloader = document.getElementById("preloader");
+          preloader.style.opacity = '0';
+          preloader.style.transition = 'opacity 0.5s ease';
+          setTimeout(() => {
+            preloader.style.display = 'none';
+          }, 1500);
+        });
+      </script>      
+
+        <!-- Navbar -->
+        <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
+          <div class="container justify-content-center">
+            <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+              <img src="images/white-duck4.webp" alt="Logo" width="50" height="50" class="d-inline-block align-text-top img-fluid img-circle">
+              <p class="ms-2 mb-0 text-white">Matematika Diskrit</p>
+            </a>
+          </div>
+          <script>
+            window.addEventListener("scroll", function () {
+              const navbar = document.getElementById("mainNavbar");
+              if (window.scrollY > 50) {
+                navbar.classList.add("navbar-scrolled");
+                navbar.classList.remove("navbar-unscrolled");
+              } else {
+                navbar.classList.remove("navbar-scrolled");
+                navbar.classList.add("navbar-unscrolled");
+              }
+            });
+          </script>
+          
+        </nav>
+
+         <!-- welcome section -->
+        <section class="info hero text-white">
+          <div class="container">
+            <div class="row justify-content-center mt-5 pb-5" style="padding-top: 5rem;">
+              <div data-aos="fade-right" data-aos-duration="1500" class="col-5 text-end">
+                <img src="images/img-1.webp" alt="" srcset="">
+              </div>
+              <div data-aos="fade-left" data-aos-duration="1500" class="col-5 py-5 ">
+                <div class="mt-4"></div>
+                <span class="h3">Welcome User!</span>
+                <h1 class="fw-bold">Duck Online Course.</h1>
+                <p class="mt-2 mb-5">Kami senang menyambut Anda di platform belajar matematika yang dirancang untuk memudahkan pemahaman konsep-konsep matematika secara praktis dan aplikatif. Di sini, Anda akan menemukan materi mulai dari dasar hingga tingkat lanjutan dengan pendekatan yang mudah dipahami.
+                <br>
+                Mari bersama-sama meningkatkan kemampuan analisis dan logika Anda melalui pembelajaran matematika yang menyenangkan dan menantang!
+                <br>  
+                Selamat belajar dan semoga sukses!</p>
+                <a href="#course" class="btn btn-success btn-gradient-green border-pill py-2 px-4 fw-fw-bold">Lihat materi</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- top categories -->
+        <section id="course" class="wave text-white ">
+          <div class="container mb-5">
+            <div class="row justify-content-center">
+              <div class="col-8">
+                <h1 class="fw-bold mb-3 text-center">List Materi</h1>
+                <p class="text-center">Berikut materi - materi yang dapat kamu pelajari</p>
+              </div>
+              <div class="col-12">
+                <div class="row justify-content-center">
+                  <div data-aos="zoom-in" class="card col-3 mx-2 rounded-3">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#permutasi" class="text-decoration-none">
+                    <div class=" p-3 position-relative overflow-hidden" style="isolation: isolate;">
+                      <h4 class="fw-bold text-primary">Permutasi</h4>
+                      <p class="text-danger">Mari Belajar!</p>
+                      <img src="images/bl-collection.png" alt="" style="width: auto !important;">
+                      <img src="images/collection-2.png" alt="category-icon" class="icon-categories">
+                    </div>
+                  </a>
+                  </div>
+                  <div data-aos="zoom-in" class="card col-3 mx-2 rounded-3">
+                    <a href="#"  data-bs-toggle="modal" data-bs-target="#materiKombinasi" class="text-decoration-none">
+                    <div class=" p-3  position-relative overflow-hidden" style="isolation: isolate;">
+                      <h4 class="fw-bold text-success">Kombinasi</h4>
+                      <p class="text-danger">Mari Belajar!</p>
+                      <img src="images/bl-collection.png" alt="" style="width: auto !important;">
+                      <img src="images/collection-1.png" alt="category-icon" class="icon-categories">
+                    </div>
+                  </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- <section class="hero text-white">
+            <div class="container hero">
+                <div class="row align-items-center align-content-center justify-content-center h-100">
+
+                    <div class="col-12 mt-5 pt-5">
+                        <h3 class="fw-bold text-center">Welcome User!.</h3>
+                        <h1 class="fw-bold text-center stroke-text">Duck Online Course.</h1>
+                        <h3 class="text-center">Silahkan pilih materi yang ingin dipelajari</h3>
+                   
+                        <div class="row mt-3 justify-content-center">
+                          <div class="mx-2 col-3 card">
+                            <div class="card-body">
+                              <h5 class="card-title">Permutasi</h5>
+                              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href class="btn btn-success h4 fw-fw-bold"
+                                data-bs-toggle="modal"
+                                data-bs-target="#materi1">Mari belajar!</a>
+                            </div>
+                          </div>
+                          <div class="mx-2 col-3 card">
+                            <div class="card-body">
+                              <h5 class="card-title">Kombinasi</h5>
+                              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href class="btn btn-success h4 fw-fw-bold"
+                                data-bs-toggle="modal"
+                                data-bs-target="#materi2">Mari belajar!</a>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="col-12 py-5">
+                        <h6 class="fw-bold text-center">Dibuat Oleh: </h6>
+                        <h6 class="fw-bold text-center">Kelompok 7</h6>
+                        <h6 class="fw-bold text-center">1. Rasyid Saputra (2403127126)</h6>
+                        <h6 class="fw-bold text-center">2. Rehan (2403111283)</h6>
+                        <h6 class="fw-bold text-center">3. Rindu Seftia Nengtias (2403110542)</h6>
+                        <h6 class="fw-bold text-center">4. Ryan Dermawan (2403134868) </h6>
+                        <h6 class="fw-bold text-center">5. Salsabila Khairani (2403113609) </h6>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Materi 1 -->
+        <!-- Modal Permutasi -->
+        <div class="modal fade" id="permutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="permutasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5 rounded">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <!-- Judul Modal Permutasi -->
+                <h1 class="me-2 modal-title text-primary fs-5" id="permutasiLabel">Permutasi</h1>
+                <!-- Link ke Contoh Soal Permutasi -->
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizPermutasi">Quiz</a>
+                </h1>
+                <!-- Link ke Studi Kasus Permutasi (jika ada) -->
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusPermutasi">Studi Kasus</a>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <!-- Carousel Permutasi -->
+                <div id="carouselPermutasi" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPermutasi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselPermutasi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselPermutasi" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselPermutasi" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselPermutasi" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  </div>
+                  <div class="carousel-inner text-black h-100">
+                    <!-- Slide 1: Apa itu Permutasi? -->
+                    <div class="carousel-item h-100 active">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                        <h2>Apa itu Permutasi?</h2>
+                        <p>
+                          Permutasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota dan memberi arti pada urutan anggota dari masing-masing susunan tersebut. Dengan kata lain, dalam permutasi urutan penempatan sangatlah penting.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 2: Permutasi Unsur yang Berbeda -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                        <h2>Permutasi Unsur yang Berbeda</h2>
+                        <p>
+                          Jenis permutasi ini merupakan cara menyusun <em>r</em> unsur dari <em>n</em> unsur yang berbeda.<br>
+                          Rumus yang digunakan: <strong>P(n, r) = n! / (n - r)!</strong><br>
+                          <em>Keterangan:</em> n = jumlah objek yang tersedia, r = jumlah objek yang disusun, ! = faktorial.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 3: Permutasi dengan Beberapa Unsur yang Sama -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                        <h2>Permutasi dengan Beberapa Unsur yang Sama</h2>
+                        <p>
+                          Ketika terdapat unsur yang identik, banyaknya susunan dihitung dengan membagi faktorial total dengan faktorial masing-masing jumlah unsur yang sama.<br>
+                          Rumusnya: <strong>n! / (a! b! ...)</strong><br>
+                          di mana a, b, ... adalah jumlah kemunculan masing-masing unsur yang identik.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 4: Permutasi Siklis -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                        <h2>Permutasi Siklis</h2>
+                        <p>
+                          Permutasi siklis menyusun n unsur yang membentuk lingkaran. Pada susunan lingkaran, rotasi yang sama dianggap identik sehingga rumusnya disesuaikan menjadi: <strong>(n - 1)!</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 5: Contoh Soal Permutasi -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                        <h2>Contoh Soal</h2>
+                        <p>
+                          <strong>Contoh:</strong> Tentukan banyaknya cara untuk menyusun 5 buku di rak jika semua buku berbeda.<br>
+                          <strong>Penyelesaian:</strong> P(5, 5) = 5! = 5 × 4 × 3 × 2 × 1 = 120.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Kontrol Carousel -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselPermutasi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselPermutasi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Permutasi -->
+
+        <div class="modal fade" id="quizPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizPermutasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <h1 class="me-2 modal-title fs-5" id="quizPermutasiLabel">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#permutasi">Permutasi</a>
+                </h1>
+                <h1 class="me-2 modal-title text-primary fs-5">
+                  Quiz 
+                </h1>
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusPermutasi">Studi Kasus</a>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <div class=" row justify-content-center">
+                  <div id="quiz-container col-6">
+                    <!-- Bagian Soal -->
+                    <div id="question-section">
+                      <p id="question-text" class="fw-bold"></p>
+                      <div id="choices"></div>
+                    </div>
+                    
+                    <!-- Pembahasan dan Alert -->
+                    <div id="alert-section" class="mt-3"></div>
+                    <div id="explanation" class="mt-3"></div>
+                    
+                    <!-- Tombol Soal Selanjutnya -->
+                    <button id="next-btn" class="btn btn-primary mt-3 hidden">Soal Selanjutnya</button>
+                    
+                    <!-- Penghitung Soal dan Nilai -->
+                    <div id="score" class="mt-4">
+                      <p>Soal: <span id="current-question"></span>/<span id="total-questions"></span></p>
+                      <p>Benar: <span id="correct-count">0</span> | Salah: <span id="incorrect-count">0</span></p>
+                    </div>
+                  </div>
+                  
+                  <!-- Tampilan akhir Quiz -->
+                  <div id="result-container" class="hidden text-center">
+                    <h2>Quiz Selesai!</h2>
+                    <p>Total Soal: <span id="final-total"></span></p>
+                    <p>Benar: <span id="final-correct"></span></p>
+                    <p>Salah: <span id="final-incorrect"></span></p>
+                    <button id="restart-btn" class="btn btn-success mt-3">Ulang Quiz</button>
+                  </div>
+                </div>
+                
+                <!-- Script JavaScript -->
+                <script>
+                  // Data pertanyaan quiz dengan 10 soal
+                  const quizQuestions = [
+                    {
+                      question: "Berapa banyak susunan berbeda dari 5 buku?",
+                      choices: ["60", "120", "24", "720"],
+                      correctAnswer: 1,
+                      explanation: "Karena semua buku berbeda, jumlah susunan adalah 5! = 120."
+                    },
+                    {
+                      question: "Dari 7 siswa, berapa cara memilih dan mengurutkan 3 siswa sebagai ketua, wakil, dan sekretaris?",
+                      choices: ["210", "35", "42", "105"],
+                      correctAnswer: 0,
+                      explanation: "Permutasi parsial: 7P3 = 7! / (7-3)! = 210."
+                    },
+                    {
+                      question: "Susunan huruf pada kata 'BANANA' dihitung dengan rumus permutasi dengan pengulangan. Berapakah jumlah susunan yang berbeda?",
+                      choices: ["30", "60", "120", "720"],
+                      correctAnswer: 1,
+                      explanation: "Frekuensi huruf: A = 3, N = 2, B = 1, sehingga 6!/(3!*2!*1!) = 60."
+                    },
+                    {
+                      question: "Berapa banyak susunan dari 4 angka yang berbeda?",
+                      choices: ["24", "12", "16", "20"],
+                      correctAnswer: 0,
+                      explanation: "Dengan 4 angka berbeda, susunan adalah 4! = 24."
+                    },
+                    {
+                      question: "Dari 8 orang, berapa cara memilih dan mengurutkan 4 orang sebagai ketua, wakil, sekretaris, dan bendahara?",
+                      choices: ["1680", "840", "336", "5040"],
+                      correctAnswer: 0,
+                      explanation: "Permutasi parsial: 8P4 = 8! / (8-4)! = 1680."
+                    },
+                    {
+                      question: "Berapa banyak susunan berbeda untuk 3 huruf yang dipilih dari huruf A, B, C, D tanpa pengulangan?",
+                      choices: ["12", "18", "24", "36"],
+                      correctAnswer: 2,
+                      explanation: "4P3 = 4! / (4-3)! = 24."
+                    },
+                    {
+                      question: "Berapa banyak susunan dari 6 siswa yang duduk melingkar?",
+                      choices: ["120", "720", "360", "240"],
+                      correctAnswer: 0,
+                      explanation: "Untuk susunan melingkar, gunakan (n-1)!, jadi (6-1)! = 5! = 120."
+                    },
+                    {
+                      question: "Terdapat 10 buku, berapa cara menyusun 3 buku yang dipilih secara berurutan?",
+                      choices: ["720", "840", "900", "600"],
+                      correctAnswer: 0,
+                      explanation: "10P3 = 10! / 7! = 10 x 9 x 8 = 720."
+                    },
+                    {
+                      question: "Jika terdapat 7 angka berbeda, berapa banyak susunan tanpa pengulangan?",
+                      choices: ["5040", "2520", "720", "840"],
+                      correctAnswer: 0,
+                      explanation: "Karena semua angka berbeda, susunan adalah 7! = 5040."
+                    },
+                    {
+                      question: "Susunan huruf kata 'STATISTIK' dihitung dengan rumus permutasi dengan pengulangan. Berapakah jumlah susunan yang berbeda?",
+                      choices: ["15120", "30240", "60480", "7560"],
+                      correctAnswer: 0,
+                      explanation: "Jumlah huruf = 9, dengan frekuensi: S=2, T=3, I=2, A=1, K=1, sehingga susunan = 9!/(2!*3!*2!*1!*1!) = 15120."
+                    }
+                  ];
+                  
+                  let currentQuestionIndex = 0;
+                  let correctCount = 0;
+                  let incorrectCount = 0;
+                  
+                  // Element DOM
+                  const questionTextEl = document.getElementById("question-text");
+                  const choicesEl = document.getElementById("choices");
+                  const alertSectionEl = document.getElementById("alert-section");
+                  const explanationEl = document.getElementById("explanation");
+                  const nextBtn = document.getElementById("next-btn");
+                  const currentQuestionEl = document.getElementById("current-question");
+                  const totalQuestionsEl = document.getElementById("total-questions");
+                  const correctCountEl = document.getElementById("correct-count");
+                  const incorrectCountEl = document.getElementById("incorrect-count");
+                  
+                  const quizContainer = document.getElementById("quiz-container");
+                  const resultContainer = document.getElementById("result-container");
+                  const finalTotalEl = document.getElementById("final-total");
+                  const finalCorrectEl = document.getElementById("final-correct");
+                  const finalIncorrectEl = document.getElementById("final-incorrect");
+                  const restartBtn = document.getElementById("restart-btn");
+                  
+                  // Fungsi untuk memuat soal
+                  function loadQuestion() {
+                    // Bersihkan konten sebelumnya
+                    alertSectionEl.innerHTML = "";
+                    explanationEl.innerHTML = "";
+                    choicesEl.innerHTML = "";
+                    nextBtn.classList.add("hidden");
+                    
+                    // Perbarui penghitung soal
+                    currentQuestionEl.innerText = currentQuestionIndex + 1;
+                    totalQuestionsEl.innerText = quizQuestions.length;
+                    
+                    // Tampilkan teks soal
+                    const currentQuestion = quizQuestions[currentQuestionIndex];
+                    questionTextEl.innerText = currentQuestion.question;
+                    
+                    // Buat pilihan jawaban sebagai radio button
+                    currentQuestion.choices.forEach((choice, index) => {
+                      const div = document.createElement("div");
+                      div.classList.add("form-check");
+                      
+                      const input = document.createElement("input");
+                      input.classList.add("form-check-input");
+                      input.type = "radio";
+                      input.name = "choice";
+                      input.id = "choice" + index;
+                      input.value = index;
+                      
+                      const label = document.createElement("label");
+                      label.classList.add("form-check-label");
+                      label.setAttribute("for", "choice" + index);
+                      label.innerText = choice;
+                      
+                      div.appendChild(input);
+                      div.appendChild(label);
+                      choicesEl.appendChild(div);
+                      
+                      // Event listener ketika jawaban dipilih
+                      input.addEventListener("change", handleAnswerSelection);
+                    });
+                  }
+                  
+                  // Fungsi penanganan saat jawaban dipilih
+                  function handleAnswerSelection(event) {
+                    // Nonaktifkan pilihan lainnya
+                    const radios = document.getElementsByName("choice");
+                    radios.forEach(radio => radio.disabled = true);
+                    
+                    const selectedAnswer = parseInt(event.target.value);
+                    const currentQuestion = quizQuestions[currentQuestionIndex];
+                    
+                    // Tampilkan pembahasan
+                    explanationEl.innerHTML = "<strong>Pembahasan:</strong> " + currentQuestion.explanation;
+                    
+                    // Periksa jawaban yang dipilih
+                    if(selectedAnswer === currentQuestion.correctAnswer){
+                      correctCount++;
+                      alertSectionEl.innerHTML = '<div class="alert alert-success" role="alert">Jawaban Anda benar!</div>';
+                    } else {
+                      incorrectCount++;
+                      alertSectionEl.innerHTML = '<div class="alert alert-danger" role="alert">Jawaban Anda salah!</div>';
+                    }
+                    
+                    // Perbarui skor
+                    correctCountEl.innerText = correctCount;
+                    incorrectCountEl.innerText = incorrectCount;
+                    
+                    // Tampilkan tombol "Soal Selanjutnya"
+                    nextBtn.classList.remove("hidden");
+                  }
+                  
+                  // Event listener untuk tombol soal selanjutnya
+                  nextBtn.addEventListener("click", function() {
+                    currentQuestionIndex++;
+                    if(currentQuestionIndex < quizQuestions.length){
+                      loadQuestion();
+                    } else {
+                      // Tampilkan hasil akhir
+                      quizContainer.classList.add("hidden");
+                      finalTotalEl.innerText = quizQuestions.length;
+                      finalCorrectEl.innerText = correctCount;
+                      finalIncorrectEl.innerText = incorrectCount;
+                      resultContainer.classList.remove("hidden");
+                    }
+                  });
+                  
+                  // Event listener untuk tombol ulang quiz
+                  restartBtn.addEventListener("click", function() {
+                    // Reset semua variabel dan tampilan
+                    currentQuestionIndex = 0;
+                    correctCount = 0;
+                    incorrectCount = 0;
+                    correctCountEl.innerText = correctCount;
+                    incorrectCountEl.innerText = incorrectCount;
+                    quizContainer.classList.remove("hidden");
+                    resultContainer.classList.add("hidden");
+                    loadQuestion();
+                  });
+                  
+                  // Inisialisasi quiz
+                  loadQuestion();
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Studi Kasus Permutasi -->
+
+        <div class="modal fade" id="studiKasusPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusPermutasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5 rounded">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <!-- Link ke Materi Permutasi -->
+                <h1 class="me-2 modal-title fs-5" id="studiKasusPermutasiLabel">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#permutasi">Permutasi</a>
+                </h1>
+                <!-- Link ke Quiz Permutasi -->
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizPermutasi">Quiz</a>
+                </h1>
+                <!-- Label Aktif -->
+                <h1 class="me-2 modal-title text-primary fs-5">Studi Kasus</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <!-- Carousel Studi Kasus Permutasi -->
+                <div id="carouselStudiKasusPermutasi" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStudiKasusPermutasi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStudiKasusPermutasi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStudiKasusPermutasi" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner h-100 text-black">
+                    <!-- Slide 1: Pengantar Studi Kasus -->
+                    <div class="carousel-item active h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                        <h2>Aplikasi Permutasi dalam Kehidupan</h2>
+                        <p>
+                          Permutasi digunakan dalam berbagai situasi di mana <strong>urutan</strong> elemen penting, seperti jadwal, pengurutan lomba, posisi duduk, atau kombinasi password.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 2: Studi Kasus - Pengurutan Posisi -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                        <h2>Studi Kasus</h2>
+                        <p>
+                          Dalam sebuah perlombaan terdapat 6 peserta. Panitia ingin menentukan siapa yang akan menjadi Juara 1, 2, dan 3. Berapa banyak cara urutan pemenang dapat disusun?
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 3: Penyelesaian Studi Kasus -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                        <h2>Penyelesaian</h2>
+                        <p>
+                          Karena posisi juara (1, 2, dan 3) memperhatikan urutan, maka kita gunakan permutasi: <br>
+                          <strong>P(6,3) = 6! / (6-3)! = 6 × 5 × 4 = 120</strong><br>
+                          Jadi, ada <strong>120 cara</strong> untuk menyusun 3 pemenang dari 6 peserta.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Navigasi Carousel -->
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselStudiKasusPermutasi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Sebelumnya</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselStudiKasusPermutasi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Berikutnya</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- materi 2 -->
+        <!-- Materi Kombinasi -->
+        <div class="modal fade" id="materiKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="materiKombinasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5 rounded">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <h1 class="me-2 modal-title text-primary fs-5" id="materiKombinasiLabel">Kombinasi</h1>
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizKombinasi">Quiz</a>
+                </h1>
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusKombinasi">Studi Kasus</a>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <!-- Carousel Kombinasi -->
+                <div id="carouselKombinasi" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselKombinasi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselKombinasi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselKombinasi" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselKombinasi" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carouselKombinasi" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                  </div>
+                  <div class="carousel-inner text-black h-100">
+                    <!-- Slide 1: Apa itu Kombinasi? -->
+                    <div class="carousel-item h-100 active">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                        <h2>Apa itu Kombinasi?</h2>
+                        <p>
+                          Kombinasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota himpunan tanpa memperhatikan urutan.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 2: Simbol dan Notasi -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                        <h2>Simbol dan Notasi</h2>
+                        <p>
+                          Simbol yang digunakan pada kombinasi adalah huruf <strong>C</strong>.<br>
+                          Kombinasi sering dituliskan sebagai <strong>C(n, r)</strong> atau <strong>nCr</strong>, yang menyatakan cara memilih <strong>r</strong> objek dari <strong>n</strong> objek tanpa memperhatikan urutan.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 3: Rumus Kombinasi -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                        <h2>Rumus Kombinasi</h2>
+                        <p>
+                          Rumus: <strong>C(n, r) = n! / (r! (n - r)!)</strong>
+                        </p>
+                        <p>
+                          <em>Penjelasan:</em><br>
+                          - <strong>n!</strong> adalah faktorial dari n, yaitu hasil perkalian dari 1 hingga n.<br>
+                          - <strong>n</strong> adalah jumlah total objek yang tersedia.<br>
+                          - <strong>r</strong> adalah jumlah objek yang dipilih.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 4: Contoh Soal -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                        <h2>Contoh Soal</h2>
+                        <p>
+                          Contoh: Tentukan banyaknya kombinasi untuk memilih 2 orang dari 10 orang.<br>
+                          <strong>C(10, 2) = 10! / (2! × 8!) = (10 × 9) / (2 × 1) = 45</strong>
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 5: Materi Tambahan -->
+                    <div class="carousel-item h-100">
+                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                        <h2>Materi Tambahan</h2>
+                        <p>
+                          Kombinasi juga digunakan dalam perhitungan probabilitas, statistika, dan pengambilan sampel, misalnya pada permainan kartu atau seleksi anggota tim dalam suatu kelompok.
+                        </p>
+                        <p>
+                          Selalu ingat, perbedaan utama kombinasi dengan permutasi adalah <strong>urutan tidak diperhitungkan</strong>.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselKombinasi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselKombinasi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quiz Kombinasi -->
+
+        <div class="modal fade" id="quizKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizKombinasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <h1 class="me-2 modal-title fs-5" id="quizKombinasiLabel">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#materiKombinasi">Kombinasi</a>
+                </h1>
+                <h1 class="me-2 modal-title text-primary fs-5">
+                  Quiz
+                </h1>
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusKombinasi">Studi Kasus</a>
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <h1 class="mb-4">Quiz Matematika Kombinasi</h1>
+                <!-- Container Quiz Kombinasi -->
+                <div id="quiz-combo-container">
+                  <!-- Bagian Soal -->
+                  <div id="question-section-combo">
+                    <p id="question-text-combo" class="font-weight-bold"></p>
+                    <div id="choices-combo"></div>
+                  </div>
+                  
+                  <!-- Alert dan Pembahasan -->
+                  <div id="alert-section-combo" class="mt-3"></div>
+                  <div id="explanation-combo" class="mt-3"></div>
+                  
+                  <!-- Tombol Soal Selanjutnya -->
+                  <button id="next-btn-combo" class="btn btn-primary mt-3 hidden">Soal Selanjutnya</button>
+                  
+                  <!-- Penghitung Soal dan Nilai -->
+                  <div id="score-combo" class="mt-4">
+                    <p>Soal: <span id="current-question-combo"></span>/<span id="total-questions-combo"></span></p>
+                    <p>Benar: <span id="correct-count-combo">0</span> | Salah: <span id="incorrect-count-combo">0</span></p>
+                  </div>
+                </div>
+                
+                <!-- Tampilan Hasil Quiz Kombinasi -->
+                <div id="result-container-combo" class="hidden text-center">
+                  <h2>Quiz Selesai!</h2>
+                  <p>Total Soal: <span id="final-total-combo"></span></p>
+                  <p>Benar: <span id="final-correct-combo"></span></p>
+                  <p>Salah: <span id="final-incorrect-combo"></span></p>
+                  <button id="restart-btn-combo" class="btn btn-success mt-3">Ulang Quiz</button>
+                </div>
+              </div>
+              
+              <!-- Script JavaScript -->
+              <script>
+                // Data pertanyaan quiz mengenai kombinasi (10 soal)
+                const quizComboQuestions = [
+                  {
+                    question: "Dari 5 siswa, berapa banyak cara memilih 3 siswa untuk menjadi anggota tim?",
+                    choices: ["10", "20", "15", "5"],
+                    correctAnswer: 0, // C(5,3)=10
+                    explanation: "C(5,3) = 5! / (3! × 2!) = 120 / (6×2) = 10."
+                  },
+                  {
+                    question: "Dari 8 buah, berapa banyak cara memilih 2 buah untuk dijadikan jus campuran?",
+                    choices: ["16", "28", "32", "36"],
+                    correctAnswer: 1, // C(8,2)=28
+                    explanation: "C(8,2) = 8! / (2! × 6!) = (8×7)/2 = 28."
+                  },
+                  {
+                    question: "Dari 10 buku, berapa banyak cara memilih 3 buku secara acak?",
+                    choices: ["120", "210", "360", "720"],
+                    correctAnswer: 0, // C(10,3)=120
+                    explanation: "C(10,3) = 10! / (3! × 7!) = (10×9×8)/(3×2×1) = 120."
+                  },
+                  {
+                    question: "Berapa cara memilih 4 orang dari 10 kandidat untuk sebuah panitia?",
+                    choices: ["210", "252", "120", "84"],
+                    correctAnswer: 0, // C(10,4)=210
+                    explanation: "C(10,4) = 10!/(4!×6!) = (10×9×8×7)/(4×3×2×1) = 210."
+                  },
+                  {
+                    question: "Dari 7 angka, berapa banyak cara memilih 3 angka tanpa memperhatikan urutan?",
+                    choices: ["35", "42", "56", "21"],
+                    correctAnswer: 0, // C(7,3)=35
+                    explanation: "C(7,3) = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 35."
+                  },
+                  {
+                    question: "Dalam memilih 2 kartu dari setumpuk 52 kartu, berapa banyak cara yang dapat dilakukan?",
+                    choices: ["1326", "2652", "1245", "2100"],
+                    correctAnswer: 0, // C(52,2)=1326
+                    explanation: "C(52,2) = (52×51) / 2 = 1326."
+                  },
+                  {
+                    question: "Dari 12 kandidat, berapa banyak cara memilih 3 kandidat untuk menjadi finalis?",
+                    choices: ["220", "132", "286", "364"],
+                    correctAnswer: 0, // C(12,3)=220
+                    explanation: "C(12,3) = 12!/(3!×9!) = (12×11×10)/(3×2×1) = 220."
+                  },
+                  {
+                    question: "Jika terdapat 6 jenis makanan, berapa banyak cara memilih 2 jenis makanan untuk disajikan?",
+                    choices: ["15", "12", "18", "9"],
+                    correctAnswer: 0, // C(6,2)=15
+                    explanation: "C(6,2) = 6!/(2!×4!) = (6×5)/2 = 15."
+                  },
+                  {
+                    question: "Dari 9 siswa, berapa cara memilih 2 siswa yang akan mewakili kelas?",
+                    choices: ["36", "45", "28", "63"],
+                    correctAnswer: 0, // C(9,2)=36
+                    explanation: "C(9,2) = 9!/(2!×7!) = (9×8)/2 = 36."
+                  },
+                  {
+                    question: "Di sebuah lomba, 7 peserta akan dipilih untuk mendapat medali (tanpa memperhatikan peringkat). Berapa cara memilih 3 peserta?",
+                    choices: ["35", "42", "56", "21"],
+                    correctAnswer: 0, // C(7,3)=35
+                    explanation: "C(7,3) = 7!/(3!×4!) = (7×6×5)/(3×2×1) = 35."
+                  }
+                ];
+                
+                let currentComboIndex = 0;
+                let correctComboCount = 0;
+                let incorrectComboCount = 0;
+                
+                // Elemen DOM untuk quiz kombinasi
+                const questionTextComboEl = document.getElementById("question-text-combo");
+                const choicesComboEl = document.getElementById("choices-combo");
+                const alertComboSectionEl = document.getElementById("alert-section-combo");
+                const explanationComboEl = document.getElementById("explanation-combo");
+                const nextComboBtn = document.getElementById("next-btn-combo");
+                const currentComboQuestionEl = document.getElementById("current-question-combo");
+                const totalComboQuestionsEl = document.getElementById("total-questions-combo");
+                const correctComboCountEl = document.getElementById("correct-count-combo");
+                const incorrectComboCountEl = document.getElementById("incorrect-count-combo");
+                
+                const quizComboContainer = document.getElementById("quiz-combo-container");
+                const resultComboContainer = document.getElementById("result-container-combo");
+                const finalTotalComboEl = document.getElementById("final-total-combo");
+                const finalCorrectComboEl = document.getElementById("final-correct-combo");
+                const finalIncorrectComboEl = document.getElementById("final-incorrect-combo");
+                const restartComboBtn = document.getElementById("restart-btn-combo");
+                
+                // Fungsi untuk memuat soal kombinasi
+                function loadComboQuestion() {
+                  // Bersihkan konten sebelumnya
+                  alertComboSectionEl.innerHTML = "";
+                  explanationComboEl.innerHTML = "";
+                  choicesComboEl.innerHTML = "";
+                  nextComboBtn.classList.add("hidden");
+                  
+                  // Perbarui penghitung soal
+                  currentComboQuestionEl.innerText = currentComboIndex + 1;
+                  totalComboQuestionsEl.innerText = quizComboQuestions.length;
+                  
+                  // Tampilkan soal
+                  const currentQuestion = quizComboQuestions[currentComboIndex];
+                  questionTextComboEl.innerText = currentQuestion.question;
+                  
+                  // Buat pilihan jawaban
+                  currentQuestion.choices.forEach((choice, index) => {
+                    const div = document.createElement("div");
+                    div.classList.add("form-check");
+                    
+                    const input = document.createElement("input");
+                    input.classList.add("form-check-input");
+                    input.type = "radio";
+                    input.name = "combo-choice";
+                    input.id = "combo-choice" + index;
+                    input.value = index;
+                    
+                    const label = document.createElement("label");
+                    label.classList.add("form-check-label");
+                    label.setAttribute("for", "combo-choice" + index);
+                    label.innerText = choice;
+                    
+                    div.appendChild(input);
+                    div.appendChild(label);
+                    choicesComboEl.appendChild(div);
+                    
+                    // Event listener untuk pilihan jawaban
+                    input.addEventListener("change", handleComboAnswerSelection);
+                  });
+                }
+                
+                // Fungsi penanganan saat jawaban dipilih
+                function handleComboAnswerSelection(event) {
+                  // Nonaktifkan pilihan lain
+                  const radios = document.getElementsByName("combo-choice");
+                  radios.forEach(radio => radio.disabled = true);
+                  
+                  const selectedAnswer = parseInt(event.target.value);
+                  const currentQuestion = quizComboQuestions[currentComboIndex];
+                  
+                  // Tampilkan pembahasan
+                  explanationComboEl.innerHTML = "<strong>Pembahasan:</strong> " + currentQuestion.explanation;
+                  
+                  // Periksa jawaban
+                  if(selectedAnswer === currentQuestion.correctAnswer){
+                    correctComboCount++;
+                    alertComboSectionEl.innerHTML = '<div class="alert alert-success" role="alert">Jawaban Anda benar!</div>';
+                  } else {
+                    incorrectComboCount++;
+                    alertComboSectionEl.innerHTML = '<div class="alert alert-danger" role="alert">Jawaban Anda salah!</div>';
+                  }
+                  
+                  // Perbarui skor
+                  correctComboCountEl.innerText = correctComboCount;
+                  incorrectComboCountEl.innerText = incorrectComboCount;
+                  
+                  // Tampilkan tombol "Soal Selanjutnya"
+                  nextComboBtn.classList.remove("hidden");
+                }
+                
+                // Event listener tombol "Soal Selanjutnya"
+                nextComboBtn.addEventListener("click", function() {
+                  currentComboIndex++;
+                  if(currentComboIndex < quizComboQuestions.length){
+                    loadComboQuestion();
+                  } else {
+                    // Tampilkan hasil akhir
+                    quizComboContainer.classList.add("hidden");
+                    finalTotalComboEl.innerText = quizComboQuestions.length;
+                    finalCorrectComboEl.innerText = correctComboCount;
+                    finalIncorrectComboEl.innerText = incorrectComboCount;
+                    resultComboContainer.classList.remove("hidden");
+                  }
+                });
+                
+                // Event listener tombol "Ulang Quiz"
+                restartComboBtn.addEventListener("click", function() {
+                  currentComboIndex = 0;
+                  correctComboCount = 0;
+                  incorrectComboCount = 0;
+                  correctComboCountEl.innerText = correctComboCount;
+                  incorrectComboCountEl.innerText = incorrectComboCount;
+                  quizComboContainer.classList.remove("hidden");
+                  resultComboContainer.classList.add("hidden");
+                  loadComboQuestion();
+                });
+                
+                // Inisialisasi quiz kombinasi
+                loadComboQuestion();
+              </script>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studi Kasus Kombinasi -->
+
+        <div class="modal fade" id="studiKasusKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusKombinasiLabel" aria-hidden="true">
+          <div class="modal-dialog modal-fullscreen p-5 rounded">
+            <div class="modal-content rounded-3">
+              <div class="modal-header container">
+                <!-- Link ke materi kombinasi -->
+                <h1 class="me-2 modal-title fs-5" id="studiKasusKombinasiLabel">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#materiKombinasi">Kombinasi</a>
+                </h1>
+                <!-- Link ke contoh soal kombinasi -->
+                <h1 class="me-2 modal-title fs-5">
+                  <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizKombinasi">Quiz</a>
+                </h1>
+                <!-- Label Studi Kasus -->
+                <h1 class="me-2 modal-title text-primary fs-5">
+                  Studi Kasus
+                </h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body container">
+                <div id="carouselStudiKasusKombinasi" class="carousel slide h-100" data-bs-ride="carousel">
+                  <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselStudiKasusKombinasi" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselStudiKasusKombinasi" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselStudiKasusKombinasi" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  </div>
+                  <div class="carousel-inner text-black h-100">
+                    <!-- Slide 1: Pengenalan Studi Kasus -->
+                    <div class="carousel-item h-100 active">
+                      <div class="">
+                        <h2>Studi Kasus Kombinasi</h2>
+                        <p>
+                          Dalam banyak situasi nyata, kombinasi digunakan untuk menentukan cara pemilihan anggota tim, susunan menu, atau perhitungan peluang.
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 2: Persoalan Studi Kasus -->
+                    <div class="carousel-item h-100">
+                      <div class="">
+                        <h2>Persoalan</h2>
+                        <p>
+                          Sebuah perusahaan ingin membentuk tim dengan 3 anggota dari 8 kandidat yang ada. Berapa banyak cara memilih tim tersebut?
+                        </p>
+                      </div>
+                    </div>
+                    <!-- Slide 3: Penyelesaian dan Penerapan Kombinasi -->
+                    <div class="carousel-item h-100">
+                      <div class="">
+                        <h2>Penyelesaian</h2>
+                        <p>
+                          Gunakan rumus kombinasi: <br>
+                          C(8, 3) = 8! / (3! × (8 – 3)!) = (8 × 7 × 6) / (3 × 2 × 1) = 56.<br>
+                          Jadi, terdapat 56 cara untuk memilih tim tersebut.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselStudiKasusKombinasi" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselStudiKasusKombinasi" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Kelompok -->
+
+        <section class="py-5 mt-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-12 text-white">
+                <h1 class="fw-bold mb-3 text-center">Anggota Kelompok</h1>
+                <p class="text-center">Berikut anggota dari kelompok 7</p>
+              </div>
+              <div data-aos-duration="1200" data-aos="fade-up-right" class="col-2">
+                <div class="card">
+                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                    <div class="card-body">
+                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                    </div>
+                </div>
+              </div>
+              <div data-aos-duration="1200" data-aos="fade-down-right" class="col-2">
+                <div class="card">
+                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                    <div class="card-body">
+                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                    </div>
+                </div>
+              </div>
+              <div data-aos-duration="1200" data-aos="zoom-in" class="col-2">
+                <div class="card">
+                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                    <div class="card-body">
+                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                    </div>
+                </div>
+              </div>
+              <div data-aos-duration="1200" data-aos="fade-down-left" class="col-2">
+                <div class="card">
+                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                    <div class="card-body">
+                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                    </div>
+                </div>
+              </div>
+              <div data-aos-duration="1200" data-aos="fade-up-left" class="col-2">
+                <div class="card">
+                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                    <div class="card-body">
+                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
+    </body>
+
+</html>
