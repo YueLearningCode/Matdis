@@ -60,62 +60,72 @@
         </nav>
 
          <!-- welcome section -->
-        <section class="info hero text-white">
-          <div class="container">
-            <div class="row justify-content-center mt-5 pb-5" style="padding-top: 5rem;">
-              <div data-aos="fade-right" data-aos-duration="1500" class="col-5 text-end">
-                <img src="images/img-1.webp" alt="" srcset="">
+         <section class="info hero text-white py-5">
+          <div class="container py-lg-5 ">
+            <div class="row flex-md-row align-items-center mt-5 pb-5 pt-5">
+              <div data-aos="fade-right" data-aos-duration="1500" class="col-lg-6 col-12 text-center">
+                <img src="images/img-1.webp" alt="Ilustrasi pembelajaran" class="img-fluid w-75">
               </div>
-              <div data-aos="fade-left" data-aos-duration="1500" class="col-5 py-5 ">
-                <div class="mt-4"></div>
+              <div data-aos="fade-left" data-aos-duration="1500" class="col-lg-6 col-12 text-center text-lg-start py-4">
                 <span class="h3">Welcome User!</span>
                 <h1 class="fw-bold">Duck Online Course.</h1>
-                <p class="mt-2 mb-5">Kami senang menyambut Anda di platform belajar matematika yang dirancang untuk memudahkan pemahaman konsep-konsep matematika secara praktis dan aplikatif. Di sini, Anda akan menemukan materi mulai dari dasar hingga tingkat lanjutan dengan pendekatan yang mudah dipahami.
-                <br>
-                Mari bersama-sama meningkatkan kemampuan analisis dan logika Anda melalui pembelajaran matematika yang menyenangkan dan menantang!
-                <br>  
-                Selamat belajar dan semoga sukses!</p>
-                <a href="#course" class="btn btn-success btn-gradient-green border-pill py-2 px-4 fw-fw-bold">Lihat materi</a>
+                <p class="mt-2 mb-4 ">
+                  Kami senang menyambut Anda di platform belajar matematika yang dirancang untuk memudahkan pemahaman konsep-konsep matematika secara praktis dan aplikatif. 
+                  <br>
+                  Mari bersama-sama meningkatkan kemampuan analisis dan logika Anda melalui pembelajaran matematika yang menyenangkan dan menantang!
+                  <br>
+                  Selamat belajar dan semoga sukses!
+                </p>
+                <a href="#course" class="btn btn-success btn-gradient-green py-2 px-4 fw-bold">Lihat materi</a>
               </div>
+
             </div>
           </div>
         </section>
+        
 
         <!-- top categories -->
-        <section id="course" class="wave text-white ">
+        <section id="course" class="wave text-white">
           <div class="container mb-5">
             <div class="row justify-content-center">
-              <div class="col-8">
-                <h1 class="fw-bold mb-3 text-center">List Materi</h1>
-                <p class="text-center">Berikut materi - materi yang dapat kamu pelajari</p>
+              <div class="col-lg-8 col-12 text-center">
+                <h1 class="fw-bold mb-3">List Materi</h1>
+                <p>Berikut materi-materi yang dapat kamu pelajari</p>
               </div>
               <div class="col-12">
-                <div class="row justify-content-center">
-                  <div data-aos="zoom-in" class="card col-3 mx-2 rounded-3">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#permutasi" class="text-decoration-none">
-                    <div class=" p-3 position-relative overflow-hidden" style="isolation: isolate;">
-                      <h4 class="fw-bold text-primary">Permutasi</h4>
-                      <p class="text-danger">Mari Belajar!</p>
-                      <img src="images/bl-collection.png" alt="" style="width: auto !important;">
-                      <img src="images/collection-2.png" alt="category-icon" class="icon-categories">
+                <div class="row g-4 justify-content-center">
+                  <!-- Kartu Permutasi -->
+                  <div data-aos="zoom-in" class="col-10 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 rounded-3">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#permutasi" class="text-decoration-none text-black">
+                        <div class="p-3 position-relative overflow-hidden" style="isolation: isolate;">
+                          <h4 class="fw-bold text-primary">Permutasi</h4>
+                          <p class="text-danger">Mari Belajar!</p>
+                          <img src="images/bl-collection.png" alt="" class="img-fluid mb-2">
+                          <img src="images/collection-2.png" alt="icon" class="icon-categories">
+                        </div>
+                      </a>
                     </div>
-                  </a>
                   </div>
-                  <div data-aos="zoom-in" class="card col-3 mx-2 rounded-3">
-                    <a href="#"  data-bs-toggle="modal" data-bs-target="#materiKombinasi" class="text-decoration-none">
-                    <div class=" p-3  position-relative overflow-hidden" style="isolation: isolate;">
-                      <h4 class="fw-bold text-success">Kombinasi</h4>
-                      <p class="text-danger">Mari Belajar!</p>
-                      <img src="images/bl-collection.png" alt="" style="width: auto !important;">
-                      <img src="images/collection-1.png" alt="category-icon" class="icon-categories">
+                  <!-- Kartu Kombinasi -->
+                  <div data-aos="zoom-in" class="col-10 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 rounded-3">
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#materiKombinasi" class="text-decoration-none text-black">
+                        <div class="p-3 position-relative overflow-hidden" style="isolation: isolate;">
+                          <h4 class="fw-bold text-success">Kombinasi</h4>
+                          <p class="text-danger">Mari Belajar!</p>
+                          <img src="images/bl-collection.png" alt="" class="img-fluid mb-2">
+                          <img src="images/collection-1.png" alt="icon" class="icon-categories">
+                        </div>
+                      </a>
                     </div>
-                  </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+        
 
         <!-- <section class="hero text-white">
             <div class="container hero">
@@ -258,7 +268,6 @@
         </div>
 
         <!-- Quiz Permutasi -->
-
         <div class="modal fade" id="quizPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizPermutasiLabel" aria-hidden="true">
           <div class="modal-dialog modal-fullscreen p-5">
             <div class="modal-content rounded-3">
@@ -503,7 +512,6 @@
         </div>
         
         <!-- Studi Kasus Permutasi -->
-
         <div class="modal fade" id="studiKasusPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusPermutasiLabel" aria-hidden="true">
           <div class="modal-dialog modal-fullscreen p-5 rounded">
             <div class="modal-content rounded-3">
@@ -672,7 +680,6 @@
         </div>
 
         <!-- Quiz Kombinasi -->
-
         <div class="modal fade" id="quizKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizKombinasiLabel" aria-hidden="true">
           <div class="modal-dialog modal-fullscreen p-5">
             <div class="modal-content rounded-3">
@@ -916,7 +923,6 @@
         </div>
 
         <!-- Studi Kasus Kombinasi -->
-
         <div class="modal fade" id="studiKasusKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusKombinasiLabel" aria-hidden="true">
           <div class="modal-dialog modal-fullscreen p-5 rounded">
             <div class="modal-content rounded-3">
@@ -988,57 +994,62 @@
         </div>
 
         <!-- Kelompok -->
-
         <section class="py-5 mt-5">
           <div class="container">
             <div class="row justify-content-center">
-              <div class="col-12 text-white">
-                <h1 class="fw-bold mb-3 text-center">Anggota Kelompok</h1>
-                <p class="text-center">Berikut anggota dari kelompok 7</p>
+              <div class="col-12 text-white text-center">
+                <h1 class="fw-bold mb-3">Anggota Kelompok</h1>
+                <p>Berikut anggota dari kelompok 7</p>
               </div>
-              <div data-aos-duration="1200" data-aos="fade-up-right" class="col-2">
-                <div class="card">
-                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+        
+              <!-- Anggota -->
+              <div class="row justify-content-center g-4 mt-4">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-top-right" data-aos-duration="1200">
+                  <div class="card h-100">
+                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
                     <div class="card-body">
                       <h6 class="card-title text-center fw-bold">Duck</h6>
                     </div>
+                  </div>
                 </div>
-              </div>
-              <div data-aos-duration="1200" data-aos="fade-down-right" class="col-2">
-                <div class="card">
-                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-right" data-aos-duration="1200">
+                  <div class="card h-100">
+                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
                     <div class="card-body">
                       <h6 class="card-title text-center fw-bold">Duck</h6>
                     </div>
+                  </div>
                 </div>
-              </div>
-              <div data-aos-duration="1200" data-aos="zoom-in" class="col-2">
-                <div class="card">
-                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-duration="1200">
+                  <div class="card h-100">
+                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
                     <div class="card-body">
                       <h6 class="card-title text-center fw-bold">Duck</h6>
                     </div>
+                  </div>
                 </div>
-              </div>
-              <div data-aos-duration="1200" data-aos="fade-down-left" class="col-2">
-                <div class="card">
-                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-left" data-aos-duration="1200">
+                  <div class="card h-100">
+                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
                     <div class="card-body">
                       <h6 class="card-title text-center fw-bold">Duck</h6>
                     </div>
+                  </div>
                 </div>
-              </div>
-              <div data-aos-duration="1200" data-aos="fade-up-left" class="col-2">
-                <div class="card">
-                  <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-right" data-aos-duration="1200">
+                  <div class="card h-100">
+                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
                     <div class="card-body">
                       <h6 class="card-title text-center fw-bold">Duck</h6>
                     </div>
+                  </div>
                 </div>
               </div>
+        
             </div>
           </div>
         </section>
+        
         
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

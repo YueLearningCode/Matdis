@@ -8,7 +8,6 @@
     position: relative;
     height: 100%;
     isolation: isolate;
-    height: 100vh;
     overflow: hidden;
     background: url("../images/home-6-bg2.webp") no-repeat;
     background-position: center;
