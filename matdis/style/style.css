@@ -61,6 +61,7 @@
 .navbar-scrolled {
     background-color: rgb(255, 255, 255) !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0px 0px 20px 20px;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -71,6 +72,7 @@
 .navbar-unscrolled {
     background-color: rgba(0, 0, 0, 0) !important;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0);
+    border-radius: 0px 0px 20px 20px;
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -119,5 +121,155 @@
       transform: scale(1);
       font-family: "Roboto", sans-serif;
     }
+  }
+  
+  .img-hero-hover{
+    transform: scale(1.0);
+    transition: all 0.3s ease;
+  }
+    .img-hero-hover:hover{
+      transform: scale(1.05);
+      transition: all 0.3s ease;
+  }
+
+   /* Variabel warna (contoh untuk jenis "education", bisa Anda sesuaikan) */
+   .education {
+    --bg-color: #e9ecef;
+    --bg-color-light: #ffeeba;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+
+  .materi-card {
+   
+    border-top-right-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+  }
+
+  .materi-card p {
+    color: #4C5656;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+  }
+
+  .materi-card:hover {
+    transform: translateY(-5px) scale(1.005);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px var(--box-shadow-color);
+  }
+
+  .materi-card:active {
+    transform: scale(1);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+      0 15px 24px var(--box-shadow-color);
+  }
+
+  /* Overlay melengkung yang akan muncul saat hover */
+  .materi-card .overlay {
+    position: absolute;
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: -20px;
+    left: -20px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+  }
+
+  /* Efek transformasi overlay saat hover */
+  .materi-card:hover .overlay {
+    transform: scale(5);
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+}
+
+  /* Saat hover, perubahan warna teks */
+  .materi-card:hover p {
+    color: var(--text-color-hover);
+  }
+  
+  .card-anggota {
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-out;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  
+  .card-anggota::before,
+  .card-anggota::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+    background: #fff;
+    transition: 0.5s;
+    z-index: -1;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+  
+  .card-anggota:hover::before {
+    transform: rotate(20deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(20deg);
+    -moz-transform: rotate(20deg);
+    -ms-transform: rotate(20deg);
+    -o-transform: rotate(20deg);
+  }
+  
+  .card-anggota:hover::after {
+    transform: rotate(10deg);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+    -webkit-transform: rotate(10deg);
+    -moz-transform: rotate(10deg);
+    -ms-transform: rotate(10deg);
+    -o-transform: rotate(10deg);
+  }
+  
+  .card-anggota .card-body-anggota {
+    position: absolute;
+    bottom: 0px;
+    transition: all 0.5s ease;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    color: rgba(0, 0, 0, 0);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+
+  .card-anggota .card-body-anggota p{
+    font-size: 14px;
+    margin-bottom: 0px !important;
+  }
+  
+  .card-anggota:hover .card-body-anggota {
+    background: rgba(0, 0, 0, 0.308);
+    color: #fff;
+  }
+  
+  .card-anggota img {
+    max-height: 263px !important;
+    object-fit: cover;
   }
   

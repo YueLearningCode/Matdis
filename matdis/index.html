@@ -6,42 +6,35 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style/style.css">
         <title>Matdis</title>
-        <link rel="icon" href="images/white-duck4.webp">
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-            crossorigin="anonymous">
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
+        <link rel="icon" href="images/kelompok-7.jpg">
+        <link href="style/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="style/bootstrap.min.css">
+        <script src="script/bootstrap.bundle.min.js" ></script>
     </head>
 
     <body style="background: #4ea2dc;">
       
-      <!-- Preload -->
-      <div id="preloader">
-        <div class="animated-seven">7</div>
-      </div>
+        <!-- Preload -->
+        <div id="preloader">
+          <div class="animated-seven">7</div>
+        </div>
 
-      <script>
-        window.addEventListener("load", function () {
-          const preloader = document.getElementById("preloader");
-          preloader.style.opacity = '0';
-          preloader.style.transition = 'opacity 0.5s ease';
-          setTimeout(() => {
-            preloader.style.display = 'none';
-          }, 1500);
-        });
-      </script>      
+        <script>
+          window.addEventListener("load", function () {
+            const preloader = document.getElementById("preloader");
+            preloader.style.opacity = '0';
+            preloader.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 1500);
+          });
+        </script>      
 
         <!-- Navbar -->
         <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
           <div class="container justify-content-center">
             <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
-              <img src="images/white-duck4.webp" alt="Logo" width="50" height="50" class="d-inline-block align-text-top img-fluid img-circle">
+              <img src="images/kelompok-7.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top img-fluid img-circle">
               <p class="ms-2 mb-0 text-white">Matematika Diskrit</p>
             </a>
           </div>
@@ -65,12 +58,12 @@
           <div class="container py-lg-5 overflow-hidden">
             <div class="row flex-md-row align-items-center mt-5 pb-5 pt-5">
               <div data-aos="fade-right" data-aos-duration="1500" class="col-lg-6 col-12 text-center">
-                <img src="images/img-1.webp" alt="Ilustrasi pembelajaran" class="img-fluid w-75">
+                <img src="images/img-1.webp" alt="Ilustrasi pembelajaran" class="img-fluid w-75 img-hero-hover">
               </div>
               <div data-aos="fade-left" data-aos-duration="1500" class="col-lg-6 col-12 text-center text-lg-start py-4">
                 <span class="h3">Welcome User!</span>
-                <h1 class="fw-bold">Duck Online Course.</h1>
-                <p class="mt-2 mb-4 ">
+                <h1 class="fw-bold">Matdis Online Course.</h1>
+                <p class="mt-2 mb-4 " style="text-align: justify;">
                   Kami senang menyambut Anda di platform belajar matematika yang dirancang untuk memudahkan pemahaman konsep-konsep matematika secara praktis dan aplikatif. 
                   <br>
                   Mari bersama-sama meningkatkan kemampuan analisis dan logika Anda melalui pembelajaran matematika yang menyenangkan dan menantang!
@@ -84,7 +77,6 @@
           </div>
         </section>
         
-
         <!-- top categories -->
         <section id="course" class="wave text-white">
           <div class="container mb-5 overflow-hidden">
@@ -97,7 +89,8 @@
                 <div class="row g-4 justify-content-center">
                   <!-- Kartu Permutasi -->
                   <div data-aos="zoom-in" class="col-10 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 rounded-3">
+                    <div class="card materi-card education h-100 rounded-3">
+                      <div class="overlay"></div>
                       <a href="#" data-bs-toggle="modal" data-bs-target="#permutasi" class="text-decoration-none text-black">
                         <div class="p-3 position-relative overflow-hidden" style="isolation: isolate;">
                           <h4 class="fw-bold text-primary">Permutasi</h4>
@@ -110,8 +103,9 @@
                   </div>
                   <!-- Kartu Kombinasi -->
                   <div data-aos="zoom-in" class="col-10 col-sm-6 col-md-4 col-lg-3">
-                    <div class="card h-100 rounded-3">
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#materiKombinasi" class="text-decoration-none text-black">
+                    <div class="card materi-card education h-100 rounded-3">
+                      <div class="overlay"></div>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#materiKombinasi" class="text-decoration-none text-black">
                         <div class="p-3 position-relative overflow-hidden" style="isolation: isolate;">
                           <h4 class="fw-bold text-success">Kombinasi</h4>
                           <p class="text-danger">Mari Belajar!</p>
@@ -127,52 +121,6 @@
           </div>
         </section>
         
-
-        <!-- <section class="hero text-white">
-            <div class="container hero">
-                <div class="row align-items-center align-content-center justify-content-center h-100">
-
-                    <div class="col-12 mt-5 pt-5">
-                        <h3 class="fw-bold text-center">Welcome User!.</h3>
-                        <h1 class="fw-bold text-center stroke-text">Duck Online Course.</h1>
-                        <h3 class="text-center">Silahkan pilih materi yang ingin dipelajari</h3>
-                   
-                        <div class="row mt-3 justify-content-center">
-                          <div class="mx-2 col-3 card">
-                            <div class="card-body">
-                              <h5 class="card-title">Permutasi</h5>
-                              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href class="btn btn-success h4 fw-fw-bold"
-                                data-bs-toggle="modal"
-                                data-bs-target="#materi1">Mari belajar!</a>
-                            </div>
-                          </div>
-                          <div class="mx-2 col-3 card">
-                            <div class="card-body">
-                              <h5 class="card-title">Kombinasi</h5>
-                              <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href class="btn btn-success h4 fw-fw-bold"
-                                data-bs-toggle="modal"
-                                data-bs-target="#materi2">Mari belajar!</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="col-12 py-5">
-                        <h6 class="fw-bold text-center">Dibuat Oleh: </h6>
-                        <h6 class="fw-bold text-center">Kelompok 7</h6>
-                        <h6 class="fw-bold text-center">1. Rasyid Saputra (2403127126)</h6>
-                        <h6 class="fw-bold text-center">2. Rehan (2403111283)</h6>
-                        <h6 class="fw-bold text-center">3. Rindu Seftia Nengtias (2403110542)</h6>
-                        <h6 class="fw-bold text-center">4. Ryan Dermawan (2403134868) </h6>
-                        <h6 class="fw-bold text-center">5. Salsabila Khairani (2403113609) </h6>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <!-- Materi 1 -->
         <!-- Modal Permutasi -->
         <div class="modal fade" id="permutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="permutasiLabel" aria-hidden="true">
@@ -204,7 +152,7 @@
                   <div class="carousel-inner text-black h-100">
                     <!-- Slide 1: Apa itu Permutasi? -->
                     <div class="carousel-item h-100 active">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                      <div class="d-flex flex-column justify-content-center r h-100 bg-light text-dark p-4 slide-content">
                         <h2>Apa itu Permutasi?</h2>
                         <p>
                           Permutasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota dan memberi arti pada urutan anggota dari masing-masing susunan tersebut. Dengan kata lain, dalam permutasi urutan penempatan sangatlah penting.
@@ -213,38 +161,41 @@
                     </div>
                     <!-- Slide 2: Permutasi Unsur yang Berbeda -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi Unsur yang Berbeda</h2>
                         <p>
                           Jenis permutasi ini merupakan cara menyusun <em>r</em> unsur dari <em>n</em> unsur yang berbeda.<br>
                           Rumus yang digunakan: <strong>P(n, r) = n! / (n - r)!</strong><br>
                           <em>Keterangan:</em> n = jumlah objek yang tersedia, r = jumlah objek yang disusun, ! = faktorial.
                         </p>
+                        <img class="col-2" src="images/rumus_permutasi_unsur_berbeda.png" alt="" srcset="">
                       </div>
                     </div>
                     <!-- Slide 3: Permutasi dengan Beberapa Unsur yang Sama -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi dengan Beberapa Unsur yang Sama</h2>
                         <p>
                           Ketika terdapat unsur yang identik, banyaknya susunan dihitung dengan membagi faktorial total dengan faktorial masing-masing jumlah unsur yang sama.<br>
                           Rumusnya: <strong>n! / (a! b! ...)</strong><br>
                           di mana a, b, ... adalah jumlah kemunculan masing-masing unsur yang identik.
                         </p>
+                        <img class="col-2" src="images/rumus_permutasi_beberapa_unsursama.png" alt="">
                       </div>
                     </div>
                     <!-- Slide 4: Permutasi Siklis -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi Siklis</h2>
                         <p>
                           Permutasi siklis menyusun n unsur yang membentuk lingkaran. Pada susunan lingkaran, rotasi yang sama dianggap identik sehingga rumusnya disesuaikan menjadi: <strong>(n - 1)!</strong>
                         </p>
+                        <img class="col-2" src="images/rumus_permutasi_siklis.png" alt="">
                       </div>
                     </div>
                     <!-- Slide 5: Contoh Soal Permutasi -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4 slide-content">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Contoh Soal</h2>
                         <p>
                           <strong>Contoh:</strong> Tentukan banyaknya cara untuk menyusun 5 buku di rak jika semua buku berbeda.<br>
@@ -287,6 +238,8 @@
               <div class="modal-body container">
                 <div class=" row justify-content-center">
                   <div id="quiz-container col-6">
+
+                    <h2 class="mb-4">Quiz Matematika Kombinasi</h2>
                     <!-- Bagian Soal -->
                     <div id="question-section">
                       <p id="question-text" class="fw-bold"></p>
@@ -540,7 +493,7 @@
                   <div class="carousel-inner h-100 text-black">
                     <!-- Slide 1: Pengantar Studi Kasus -->
                     <div class="carousel-item active h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Aplikasi Permutasi dalam Kehidupan</h2>
                         <p>
                           Permutasi digunakan dalam berbagai situasi di mana <strong>urutan</strong> elemen penting, seperti jadwal, pengurutan lomba, posisi duduk, atau kombinasi password.
@@ -549,7 +502,7 @@
                     </div>
                     <!-- Slide 2: Studi Kasus - Pengurutan Posisi -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Studi Kasus</h2>
                         <p>
                           Dalam sebuah perlombaan terdapat 6 peserta. Panitia ingin menentukan siapa yang akan menjadi Juara 1, 2, dan 3. Berapa banyak cara urutan pemenang dapat disusun?
@@ -558,7 +511,7 @@
                     </div>
                     <!-- Slide 3: Penyelesaian Studi Kasus -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light p-4 rounded">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Penyelesaian</h2>
                         <p>
                           Karena posisi juara (1, 2, dan 3) memperhatikan urutan, maka kita gunakan permutasi: <br>
@@ -611,7 +564,7 @@
                   <div class="carousel-inner text-black h-100">
                     <!-- Slide 1: Apa itu Kombinasi? -->
                     <div class="carousel-item h-100 active">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Apa itu Kombinasi?</h2>
                         <p>
                           Kombinasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota himpunan tanpa memperhatikan urutan.
@@ -620,7 +573,7 @@
                     </div>
                     <!-- Slide 2: Simbol dan Notasi -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Simbol dan Notasi</h2>
                         <p>
                           Simbol yang digunakan pada kombinasi adalah huruf <strong>C</strong>.<br>
@@ -630,7 +583,7 @@
                     </div>
                     <!-- Slide 3: Rumus Kombinasi -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Rumus Kombinasi</h2>
                         <p>
                           Rumus: <strong>C(n, r) = n! / (r! (n - r)!)</strong>
@@ -641,11 +594,12 @@
                           - <strong>n</strong> adalah jumlah total objek yang tersedia.<br>
                           - <strong>r</strong> adalah jumlah objek yang dipilih.
                         </p>
+                        <img src="images/rumus-kombinasi-matematika.jpeg" class="col-2" alt="">
                       </div>
                     </div>
                     <!-- Slide 4: Contoh Soal -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Contoh Soal</h2>
                         <p>
                           Contoh: Tentukan banyaknya kombinasi untuk memilih 2 orang dari 10 orang.<br>
@@ -655,7 +609,7 @@
                     </div>
                     <!-- Slide 5: Materi Tambahan -->
                     <div class="carousel-item h-100">
-                      <div class="d-flex flex-column justify-content-center align-items-center h-100 bg-light text-dark p-4">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Materi Tambahan</h2>
                         <p>
                           Kombinasi juga digunakan dalam perhitungan probabilitas, statistika, dan pengambilan sampel, misalnya pada permainan kartu atau seleksi anggota tim dalam suatu kelompok.
@@ -697,7 +651,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body container">
-                <h1 class="mb-4">Quiz Matematika Kombinasi</h1>
+                <h3 class="mb-4">Quiz Matematika Kombinasi</h3>
                 <!-- Container Quiz Kombinasi -->
                 <div id="quiz-combo-container">
                   <!-- Bagian Soal -->
@@ -952,7 +906,7 @@
                   <div class="carousel-inner text-black h-100">
                     <!-- Slide 1: Pengenalan Studi Kasus -->
                     <div class="carousel-item h-100 active">
-                      <div class="">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Studi Kasus Kombinasi</h2>
                         <p>
                           Dalam banyak situasi nyata, kombinasi digunakan untuk menentukan cara pemilihan anggota tim, susunan menu, atau perhitungan peluang.
@@ -961,7 +915,7 @@
                     </div>
                     <!-- Slide 2: Persoalan Studi Kasus -->
                     <div class="carousel-item h-100">
-                      <div class="">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Persoalan</h2>
                         <p>
                           Sebuah perusahaan ingin membentuk tim dengan 3 anggota dari 8 kandidat yang ada. Berapa banyak cara memilih tim tersebut?
@@ -970,7 +924,7 @@
                     </div>
                     <!-- Slide 3: Penyelesaian dan Penerapan Kombinasi -->
                     <div class="carousel-item h-100">
-                      <div class="">
+                      <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Penyelesaian</h2>
                         <p>
                           Gunakan rumus kombinasi: <br>
@@ -1000,61 +954,64 @@
             <div class="row justify-content-center">
               <div class="col-12 text-white text-center">
                 <h1 class="fw-bold mb-3">Anggota Kelompok</h1>
-                <p>Berikut anggota dari kelompok 7</p>
+                <p>Kelompok 7, Sistem, Informasi 2024, FMIPA, Universitas Riau</p>
+                <p>Dosen Pengampu: Drs. Sukamto, M.Kom.</p>
               </div>
-        
-              <!-- Anggota -->
-              <div class="row justify-content-center g-4 mt-4">
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-top-right" data-aos-duration="1200">
-                  <div class="card h-100">
-                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
-                    <div class="card-body">
-                      <h6 class="card-title text-center fw-bold">Duck</h6>
+              <div class="row justify-content-center g-4">
+                <div class="col-6 col-sm-4 col-md-3 col-lg-20" data-aos="zoom-in" data-aos-duration="1200">
+                  <div class="card card-anggota h-100">
+                    <img src="images/foto-acid.jpg" class="img-fluid rounded" alt="kelompok">
+                    <div class="card-body card-body-anggota">
+                      <p class="card-title">Rasyid Saputra (2403127126)</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-right" data-aos-duration="1200">
-                  <div class="card h-100">
-                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
-                    <div class="card-body">
-                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-20" data-aos="fade-down-left" data-aos-duration="1200">
+                  <div class="card card-anggota h-100">
+                    <img src="images/foto-rehan.jpg" class="img-fluid rounded" alt="kelompok">
+                    <div class="card-body card-body-anggota">
+                      <p class="card-title">Rehan (2403111283)</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="zoom-in" data-aos-duration="1200">
-                  <div class="card h-100">
-                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
-                    <div class="card-body">
-                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-20 " data-aos="fade-top-right" data-aos-duration="1200">
+                  <div class="card card-anggota h-100">
+                    <img src="images/foto-rindu.jpg" class="img-fluid rounded" alt="kelompok">
+                    <div class="card-body card-body-anggota">
+                      <p class="card-title">Rindu Seftia Nengtias (2403110542)</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-left" data-aos-duration="1200">
-                  <div class="card h-100">
-                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
-                    <div class="card-body">
-                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-20 " data-aos="fade-down-left" data-aos-duration="1200">
+                  <div class="card card-anggota h-100">
+                    <img src="images/foto-ryan.jpg" class="img-fluid rounded" alt="kelompok">
+                    <div class="card-body card-body-anggota">
+                      <p class="card-title">Ryan Dermawan (2403134868)</p>
                     </div>
                   </div>
                 </div>
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2" data-aos="fade-down-right" data-aos-duration="1200">
-                  <div class="card h-100">
-                    <img src="images/white-duck4.webp" class="card-img-top" alt="kelompok">
-                    <div class="card-body">
-                      <h6 class="card-title text-center fw-bold">Duck</h6>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-20 " data-aos="fade-down-right" data-aos-duration="1200">
+                  <div class="card card-anggota h-100">
+                    <img src="images/foto-caca.jpg" class="img-fluid rounded" alt="kelompok">
+                    <div class="card-body card-body-anggota">
+                      <p class="card-title">Salsabila Khairani (2403113609)</p>
                     </div>
                   </div>
                 </div>
               </div>
-        
             </div>
           </div>
         </section>
         
-        
+        <!-- copyright -->
+         <section>
+          <div class="text-center text-white bg-black">
+            <p class="py-2 mb-0 small">©copyright 2025 by Kelompok 7</p>
+          </div>
+         </section>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="script/aos.js"></script>
         <script>
           AOS.init();
         </script>
