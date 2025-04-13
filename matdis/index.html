@@ -124,17 +124,17 @@
         <!-- Materi 1 -->
         <!-- Modal Permutasi -->
         <div class="modal fade" id="permutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="permutasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5 rounded">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
                 <!-- Judul Modal Permutasi -->
-                <h1 class="me-2 modal-title text-primary fs-5" id="permutasiLabel">Permutasi</h1>
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5" id="permutasiLabel">Permutasi</h1>
                 <!-- Link ke Contoh Soal Permutasi -->
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizPermutasi">Quiz</a>
                 </h1>
-                <!-- Link ke Studi Kasus Permutasi (jika ada) -->
-                <h1 class="me-2 modal-title fs-5">
+                <!-- Link ke Studi Kasus Permutasi -->
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusPermutasi">Studi Kasus</a>
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -154,7 +154,7 @@
                     <div class="carousel-item h-100 active">
                       <div class="d-flex flex-column justify-content-center r h-100 bg-light text-dark p-4 slide-content">
                         <h2>Apa itu Permutasi?</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Permutasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota dan memberi arti pada urutan anggota dari masing-masing susunan tersebut. Dengan kata lain, dalam permutasi urutan penempatan sangatlah penting.
                         </p>
                       </div>
@@ -163,41 +163,41 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi Unsur yang Berbeda</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Jenis permutasi ini merupakan cara menyusun <em>r</em> unsur dari <em>n</em> unsur yang berbeda.<br>
                           Rumus yang digunakan: <strong>P(n, r) = n! / (n - r)!</strong><br>
                           <em>Keterangan:</em> n = jumlah objek yang tersedia, r = jumlah objek yang disusun, ! = faktorial.
                         </p>
-                        <img class="col-2" src="images/rumus_permutasi_unsur_berbeda.png" alt="" srcset="">
+                        <img class="col-lg-2 col-md-4 col-12" src="images/rumus_permutasi_unsur_berbeda.png" alt="" srcset="">
                       </div>
                     </div>
                     <!-- Slide 3: Permutasi dengan Beberapa Unsur yang Sama -->
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi dengan Beberapa Unsur yang Sama</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Ketika terdapat unsur yang identik, banyaknya susunan dihitung dengan membagi faktorial total dengan faktorial masing-masing jumlah unsur yang sama.<br>
                           Rumusnya: <strong>n! / (a! b! ...)</strong><br>
                           di mana a, b, ... adalah jumlah kemunculan masing-masing unsur yang identik.
                         </p>
-                        <img class="col-2" src="images/rumus_permutasi_beberapa_unsursama.png" alt="">
+                        <img class="col-lg-2 col-md-4 col-12" src="images/rumus_permutasi_beberapa_unsursama.png" alt="">
                       </div>
                     </div>
                     <!-- Slide 4: Permutasi Siklis -->
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Permutasi Siklis</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Permutasi siklis menyusun n unsur yang membentuk lingkaran. Pada susunan lingkaran, rotasi yang sama dianggap identik sehingga rumusnya disesuaikan menjadi: <strong>(n - 1)!</strong>
                         </p>
-                        <img class="col-2" src="images/rumus_permutasi_siklis.png" alt="">
+                        <img class="col-lg-2 col-md-4 col-12" src="images/rumus_permutasi_siklis.png" alt="">
                       </div>
                     </div>
                     <!-- Slide 5: Contoh Soal Permutasi -->
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4 slide-content">
                         <h2>Contoh Soal</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           <strong>Contoh:</strong> Tentukan banyaknya cara untuk menyusun 5 buku di rak jika semua buku berbeda.<br>
                           <strong>Penyelesaian:</strong> P(5, 5) = 5! = 5 × 4 × 3 × 2 × 1 = 120.
                         </p>
@@ -221,16 +221,16 @@
 
         <!-- Quiz Permutasi -->
         <div class="modal fade" id="quizPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizPermutasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
-                <h1 class="me-2 modal-title fs-5" id="quizPermutasiLabel">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5" id="quizPermutasiLabel">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#permutasi">Permutasi</a>
                 </h1>
-                <h1 class="me-2 modal-title text-primary fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5">
                   Quiz 
                 </h1>
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusPermutasi">Studi Kasus</a>
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -255,17 +255,17 @@
                     
                     <!-- Penghitung Soal dan Nilai -->
                     <div id="score" class="mt-4">
-                      <p>Soal: <span id="current-question"></span>/<span id="total-questions"></span></p>
-                      <p>Benar: <span id="correct-count">0</span> | Salah: <span id="incorrect-count">0</span></p>
+                      <p style="text-align: justify;">Soal: <span id="current-question"></span>/<span id="total-questions"></span></p>
+                      <p style="text-align: justify;">Benar: <span id="correct-count">0</span> | Salah: <span id="incorrect-count">0</span></p>
                     </div>
                   </div>
                   
                   <!-- Tampilan akhir Quiz -->
                   <div id="result-container" class="hidden text-center">
                     <h2>Quiz Selesai!</h2>
-                    <p>Total Soal: <span id="final-total"></span></p>
-                    <p>Benar: <span id="final-correct"></span></p>
-                    <p>Salah: <span id="final-incorrect"></span></p>
+                    <p style="text-align: justify;">Total Soal: <span id="final-total"></span></p>
+                    <p style="text-align: justify;">Benar: <span id="final-correct"></span></p>
+                    <p style="text-align: justify;">Salah: <span id="final-incorrect"></span></p>
                     <button id="restart-btn" class="btn btn-success mt-3">Ulang Quiz</button>
                   </div>
                 </div>
@@ -466,20 +466,20 @@
         </div>
         
         <!-- Studi Kasus Permutasi -->
-        <div class="modal fade" id="studiKasusPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusPermutasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5 rounded">
+        <div class="modal fade" id="studiKasusPermutasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusPermutasiLabel" aria-hidden0 p-lg-5 p-md-3"true">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
                 <!-- Link ke Materi Permutasi -->
-                <h1 class="me-2 modal-title fs-5" id="studiKasusPermutasiLabel">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5" id="studiKasusPermutasiLabel">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#permutasi">Permutasi</a>
                 </h1>
                 <!-- Link ke Quiz Permutasi -->
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizPermutasi">Quiz</a>
                 </h1>
                 <!-- Label Aktif -->
-                <h1 class="me-2 modal-title text-primary fs-5">Studi Kasus</h1>
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5">Studi Kasus</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body container">
@@ -495,7 +495,7 @@
                     <div class="carousel-item active h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Aplikasi Permutasi dalam Kehidupan</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Permutasi digunakan dalam berbagai situasi di mana <strong>urutan</strong> elemen penting, seperti jadwal, pengurutan lomba, posisi duduk, atau kombinasi password.
                         </p>
                       </div>
@@ -504,7 +504,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Studi Kasus</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Dalam sebuah perlombaan terdapat 6 peserta. Panitia ingin menentukan siapa yang akan menjadi Juara 1, 2, dan 3. Berapa banyak cara urutan pemenang dapat disusun?
                         </p>
                       </div>
@@ -513,7 +513,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light p-4 rounded">
                         <h2>Penyelesaian</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Karena posisi juara (1, 2, dan 3) memperhatikan urutan, maka kita gunakan permutasi: <br>
                           <strong>P(6,3) = 6! / (6-3)! = 6 × 5 × 4 = 120</strong><br>
                           Jadi, ada <strong>120 cara</strong> untuk menyusun 3 pemenang dari 6 peserta.
@@ -538,15 +538,15 @@
         
         <!-- materi 2 -->
         <!-- Materi Kombinasi -->
-        <div class="modal fade" id="materiKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="materiKombinasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5 rounded">
+        <div class="modal fade" id="materiKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="materiKombinasiLabel" aria-hidden0 p-lg-5 p-md-3"true">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
-                <h1 class="me-2 modal-title text-primary fs-5" id="materiKombinasiLabel">Kombinasi</h1>
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5" id="materiKombinasiLabel">Kombinasi</h1>
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizKombinasi">Quiz</a>
                 </h1>
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusKombinasi">Studi Kasus</a>
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -566,7 +566,7 @@
                     <div class="carousel-item h-100 active">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Apa itu Kombinasi?</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Kombinasi adalah susunan-susunan yang dibentuk dari anggota-anggota suatu himpunan dengan mengambil seluruh atau sebagian anggota himpunan tanpa memperhatikan urutan.
                         </p>
                       </div>
@@ -575,7 +575,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Simbol dan Notasi</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Simbol yang digunakan pada kombinasi adalah huruf <strong>C</strong>.<br>
                           Kombinasi sering dituliskan sebagai <strong>C(n, r)</strong> atau <strong>nCr</strong>, yang menyatakan cara memilih <strong>r</strong> objek dari <strong>n</strong> objek tanpa memperhatikan urutan.
                         </p>
@@ -585,10 +585,10 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Rumus Kombinasi</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Rumus: <strong>C(n, r) = n! / (r! (n - r)!)</strong>
                         </p>
-                        <p>
+                        <p style="text-align: justify;">
                           <em>Penjelasan:</em><br>
                           - <strong>n!</strong> adalah faktorial dari n, yaitu hasil perkalian dari 1 hingga n.<br>
                           - <strong>n</strong> adalah jumlah total objek yang tersedia.<br>
@@ -601,7 +601,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Contoh Soal</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Contoh: Tentukan banyaknya kombinasi untuk memilih 2 orang dari 10 orang.<br>
                           <strong>C(10, 2) = 10! / (2! × 8!) = (10 × 9) / (2 × 1) = 45</strong>
                         </p>
@@ -611,10 +611,10 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Materi Tambahan</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Kombinasi juga digunakan dalam perhitungan probabilitas, statistika, dan pengambilan sampel, misalnya pada permainan kartu atau seleksi anggota tim dalam suatu kelompok.
                         </p>
-                        <p>
+                        <p style="text-align: justify;">
                           Selalu ingat, perbedaan utama kombinasi dengan permutasi adalah <strong>urutan tidak diperhitungkan</strong>.
                         </p>
                       </div>
@@ -636,16 +636,16 @@
 
         <!-- Quiz Kombinasi -->
         <div class="modal fade" id="quizKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="quizKombinasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
-                <h1 class="me-2 modal-title fs-5" id="quizKombinasiLabel">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5" id="quizKombinasiLabel">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#materiKombinasi">Kombinasi</a>
                 </h1>
-                <h1 class="me-2 modal-title text-primary fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5">
                   Quiz
                 </h1>
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#studiKasusKombinasi">Studi Kasus</a>
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -669,17 +669,17 @@
                   
                   <!-- Penghitung Soal dan Nilai -->
                   <div id="score-combo" class="mt-4">
-                    <p>Soal: <span id="current-question-combo"></span>/<span id="total-questions-combo"></span></p>
-                    <p>Benar: <span id="correct-count-combo">0</span> | Salah: <span id="incorrect-count-combo">0</span></p>
+                    <p style="text-align: justify;">Soal: <span id="current-question-combo"></span>/<span id="total-questions-combo"></span></p>
+                    <p style="text-align: justify;">Benar: <span id="correct-count-combo">0</span> | Salah: <span id="incorrect-count-combo">0</span></p>
                   </div>
                 </div>
                 
                 <!-- Tampilan Hasil Quiz Kombinasi -->
                 <div id="result-container-combo" class="hidden text-center">
                   <h2>Quiz Selesai!</h2>
-                  <p>Total Soal: <span id="final-total-combo"></span></p>
-                  <p>Benar: <span id="final-correct-combo"></span></p>
-                  <p>Salah: <span id="final-incorrect-combo"></span></p>
+                  <p style="text-align: justify;">Total Soal: <span id="final-total-combo"></span></p>
+                  <p style="text-align: justify;">Benar: <span id="final-correct-combo"></span></p>
+                  <p style="text-align: justify;">Salah: <span id="final-incorrect-combo"></span></p>
                   <button id="restart-btn-combo" class="btn btn-success mt-3">Ulang Quiz</button>
                 </div>
               </div>
@@ -878,20 +878,20 @@
         </div>
 
         <!-- Studi Kasus Kombinasi -->
-        <div class="modal fade" id="studiKasusKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusKombinasiLabel" aria-hidden="true">
-          <div class="modal-dialog modal-fullscreen p-5 rounded">
+        <div class="modal fade" id="studiKasusKombinasi" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="studiKasusKombinasiLabel" aria-hidden0 p-lg-5 p-md-3"true">
+          <div class="modal-dialog modal-fullscreen p-0 p-lg-5 p-md-3 rounded">
             <div class="modal-content rounded-3">
               <div class="modal-header container">
                 <!-- Link ke materi kombinasi -->
-                <h1 class="me-2 modal-title fs-5" id="studiKasusKombinasiLabel">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5" id="studiKasusKombinasiLabel">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#materiKombinasi">Kombinasi</a>
                 </h1>
                 <!-- Link ke contoh soal kombinasi -->
-                <h1 class="me-2 modal-title fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start fs-5">
                   <a href="#" class="text-decoration-none text-success" data-bs-toggle="modal" data-bs-target="#quizKombinasi">Quiz</a>
                 </h1>
                 <!-- Label Studi Kasus -->
-                <h1 class="me-2 modal-title text-primary fs-5">
+                <h1 class="px-1 px-md-3 px-lg-5 modal-title border-end border-start text-primary fs-5">
                   Studi Kasus
                 </h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -908,7 +908,7 @@
                     <div class="carousel-item h-100 active">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Studi Kasus Kombinasi</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Dalam banyak situasi nyata, kombinasi digunakan untuk menentukan cara pemilihan anggota tim, susunan menu, atau perhitungan peluang.
                         </p>
                       </div>
@@ -917,7 +917,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Persoalan</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Sebuah perusahaan ingin membentuk tim dengan 3 anggota dari 8 kandidat yang ada. Berapa banyak cara memilih tim tersebut?
                         </p>
                       </div>
@@ -926,7 +926,7 @@
                     <div class="carousel-item h-100">
                       <div class="d-flex flex-column justify-content-center h-100 bg-light text-dark p-4">
                         <h2>Penyelesaian</h2>
-                        <p>
+                        <p style="text-align: justify;">
                           Gunakan rumus kombinasi: <br>
                           C(8, 3) = 8! / (3! × (8 – 3)!) = (8 × 7 × 6) / (3 × 2 × 1) = 56.<br>
                           Jadi, terdapat 56 cara untuk memilih tim tersebut.
@@ -949,7 +949,8 @@
         </div>
 
         <!-- Kelompok -->
-        <section class="py-5 mt-5">
+        <section class="py-5 footer-wrapper mt-5">
+          <img src="images/home-6-bg2.webp" class="img-fluid bg-footer" alt="">
           <div class="container overflow-hidden">
             <div class="row justify-content-center">
               <div class="col-12 text-white text-center">

@@ -14,13 +14,6 @@
     background-size: cover;
 }
 
-.hero .bg-img{
-    position: absolute;
-    width: 100%;
-    top: 0;
-    z-index: -1;
-}
-
 .img-circle{
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -40,7 +33,7 @@
 }
 
 .wave{
-    background: url(../images/bk-category.webp) no-repeat;
+    background: url(../images/bk-skill.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -271,5 +264,26 @@
   .card-anggota img {
     max-height: 263px !important;
     object-fit: cover;
+    height: 100%;
   }
   
+  .footer-wrapper{
+    position: relative;
+    height: 100%;
+    isolation: isolate;
+    overflow: hidden;
+    
+  }
+
+  .bg-footer{
+    position: absolute;
+    z-index: -1;
+    transform: rotate(180deg);
+    background: url("../images/home-6-bg2.webp") no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
