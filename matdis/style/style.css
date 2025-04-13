@@ -278,6 +278,7 @@
   .bg-footer{
     position: absolute;
     z-index: -1;
+    bottom: 0;
     transform: rotate(180deg);
     background: url("../images/home-6-bg2.webp") no-repeat;
     background-position: center;
@@ -286,4 +287,15 @@
     -moz-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
+}
+
+.p-responsive {
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 700px) {
+  .p-responsive {
+    font-size: 1rem;
+  }
+ 
 }
